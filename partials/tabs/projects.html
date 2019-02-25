@@ -5,13 +5,23 @@ therefore adding an ignore comment -->
   <br>
   <div class="main-content container">
     <div class="col m8 col offset-m2 s12">
-      <div class="input-field searchbar">
-        <input ng-model="searchText" placeholder="Search for a project" id="search" type="search" class="validate"> </div>
+      <div class="input-field searchbar filters" >
+        <input ng-model="searchText" placeholder="Search for a project" id="search" type="search" class="validate">
+        <input type="button" class="dropdown-trigger btn filter-button" data-target='filter-dropdown' data-activates='filter-dropdown' value="Filter">
+      </div>
       <div style="text-align: center;">
         For more project ideas, <a href="https://github.com/coala/projects/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22Project+Proposal%22">click here</a>.
         <br>
         For past years <strong>GSoC</strong> project reports, <a href="http://projects.coala.io/reports">click here</a>.
       </div>
+    </div>
+    <div id='filter-dropdown' class='dropdown-content'>
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!">three</a></li>
+        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
     </div>
   </div>
   <br>
@@ -112,5 +122,7 @@ therefore adding an ignore comment -->
      } // Callback for Modal close
     }
     );
+
+    $('.dropdown-trigger').dropdown();
   })
 </script>

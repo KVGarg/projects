@@ -1,3 +1,8 @@
+.dropdown-content{
+   width: max-content !important;
+   height:auto !important;
+}
+
 .hash_value_dup {
   position: 'absolute';
   left: '-9999px';
@@ -31,6 +36,13 @@
 }
 .fa-clipboard:hover .hinttext {
   visibility: visible;
+}
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+}
+.filter-button {
+  margin-left: 1.5em;
 }
 .project-detail-element > .clickable:hover, .clickable:hover .chip:hover {
   cursor: pointer;
@@ -108,6 +120,12 @@
     display: none;
   }
 }
+@media only screen and (max-width: 600px) {
+  .filters {
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+  }
+} 
 .ribbon {
   position: absolute;
   top: 0; right: 0;
@@ -121,6 +139,10 @@
 .theatre .name {
   padding-left: 0.5em;
   padding-right: 0.5em;
+}
+
+.searchbar {
+  max-width: 95%;
 }
 
 #sha256sum_hash_value {
