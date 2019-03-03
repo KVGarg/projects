@@ -1,3 +1,6 @@
+.description img {
+  max-width: 100%;
+}
 .hash_value_dup {
   position: 'absolute';
   left: '-9999px';
